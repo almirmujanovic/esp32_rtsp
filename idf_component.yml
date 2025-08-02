@@ -1,0 +1,10 @@
+description: "RTSP MJPEG Server for ESP32 Camera"
+url: "https://github.com/almirmujanovic/rtsp-mjpeg-component"
+dependencies:
+  espressif/esp32-camera: "^2.0.2"
+  idf: ">=5.0.0"
+
+targets:
+  - esp32
+  - esp32s2  
+  - esp32s3

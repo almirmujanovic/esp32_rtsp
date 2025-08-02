@@ -1,8 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 
-#treat as ESP-IDF component
+# Include the component from the parent directory
+set(EXTRA_COMPONENT_DIRS "../../components")
+
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-
-#component name
-project(my_rtsp_dev)
-
+project(basic_rtsp_server)

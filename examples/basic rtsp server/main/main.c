@@ -7,10 +7,11 @@
 #include "freertos/event_groups.h"
 #include "rtsp_mjpeg.h"
 #include "camera_config.h"
+#include "wifi_config.h"
+
 
 static const char *TAG = "app_rtsp";
-#define WIFI_SSID "THINKPAD 0685"
-#define WIFI_PASS "638\\Yg95"
+
 #define MAX_RETRY 5
 
 static EventGroupHandle_t s_wifi_event_group;
