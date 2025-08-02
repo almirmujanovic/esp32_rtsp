@@ -1,0 +1,25 @@
+menu "RTSP MJPEG Server"
+
+config RTSP_MJPEG_PORT
+    int "RTSP control port"
+    default 554
+
+config RTSP_MJPEG_CHUNK_SIZE
+    int "RTP packet payload size"
+    default 1200
+
+config RTSP_MJPEG_DEFAULT_FPS
+    int "Default streaming FPS"
+    default 5
+
+endmenu
+
+menu "Camera settings"
+config CAMERA_JPEG_QUALITY
+    int "JPEG quality (lower = better)"
+    default 25
+
+config CAMERA_FRAME_SIZE_ENUM
+    int "Camera frame size enum (FRAMESIZE_QVGA=2, FRAMESIZE_VGA=3, etc.)"
+    default 2
+endmenu

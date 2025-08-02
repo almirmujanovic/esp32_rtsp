@@ -1,0 +1,6 @@
+name: rtsp_mjpeg
+version: 1.0.0
+dependencies:
+  espressif/esp32-camera: "*"
+  espressif/esp_jpeg:      "*"
+  idf:                     ">=5.0"

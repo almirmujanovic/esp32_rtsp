@@ -1,0 +1,585 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x2b (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Aug  2 2025 12:42:40[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=1f928h (129320) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=0002f950 vaddr=3fc9ba00 size=006c8h (  1736) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=9ae60h (634464) map[0m
+[0;32mI (227) esp_image: segment 3: paddr=000cae88 vaddr=3fc9c0c8 size=05ab8h ( 23224) load[0m
+[0;32mI (232) esp_image: segment 4: paddr=000d0948 vaddr=40374000 size=17918h ( 96536) load[0m
+[0;32mI (253) esp_image: segment 5: paddr=000e8268 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (263) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (263) boot: Disabling RNG early entropy source...[0m
+[0;32mI (273) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (273) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (273) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (276) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (280) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (284) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (288) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (293) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (298) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (303) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (308) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (313) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (316) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (320) esp_psram: Speed: 80MHz[0m
+[0;32mI (323) cpu_start: Multicore app[0m
+[0;32mI (759) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (767) cpu_start: Pro cpu start user code[0m
+[0;32mI (767) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (768) app_init: Application information:[0m
+[0;32mI (768) app_init: Project name:     my_rtsp_dev[0m
+[0;32mI (772) app_init: App version:      1[0m
+[0;32mI (775) app_init: Compile time:     Aug  2 2025 12:42:21[0m
+[0;32mI (780) app_init: ELF file SHA256:  179640919...[0m
+[0;32mI (785) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (788) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (792) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (796) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (800) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (806) heap_init: At 3FCA60D0 len 00043640 (269 KiB): RAM[0m
+[0;32mI (811) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (817) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (822) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (827) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (835) spi_flash: detected chip: gd[0m
+[0;32mI (837) spi_flash: flash io: dio[0m
+[0;33mW (840) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (852) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (859) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (865) main_task: Started on CPU0[0m
+[0;32mI (885) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (885) main_task: Calling app_main()[0m
+[0;32mI (905) pp: pp rom version: e7ae62f[0m
+[0;32mI (905) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (915) wifi:wifi driver task: 3fcb80a4, prio:23, stack:6656, core=0[0m
+[0;32mI (925) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (925) wifi:wifi certification version: v7.0[0m
+[0;32mI (925) wifi:config NVS flash: enabled[0m
+[0;32mI (925) wifi:config nano formatting: disabled[0m
+[0;32mI (925) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (935) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (935) wifi:Init management short buffer num: 32[0m
+[0;32mI (935) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (945) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (945) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (955) wifi:Init static rx buffer num: 10[0m
+[0;32mI (955) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (965) wifi_init: rx ba win: 6[0m
+[0;32mI (965) wifi_init: accept mbox: 6[0m
+[0;32mI (965) wifi_init: tcpip mbox: 32[0m
+[0;32mI (965) wifi_init: udp mbox: 6[0m
+[0;32mI (975) wifi_init: tcp mbox: 6[0m
+[0;32mI (975) wifi_init: tcp tx win: 5760[0m
+[0;32mI (975) wifi_init: tcp rx win: 5760[0m
+[0;32mI (985) wifi_init: tcp mss: 1440[0m
+[0;32mI (985) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (985) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (995) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (995) phy_init: phy_version 700,8582a7fd,Feb 10 2025,20:13:11[0m
+[0;32mI (1035) wifi:mode : sta (74:4d:bd:89:2c:90)[0m
+[0;32mI (1035) wifi:enable tsf[0m
+[0;32mI (1035) app_rtsp: wifi_init_sta finished.[0m
+[0;32mI (1045) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1045) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1055) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1055) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1075) wifi:connected with THINKPAD 0685, aid = 1, channel 11, BW20, bssid = f2:57:a6:8d:09:78[0m
+[0;32mI (1075) wifi:security: WPA2-PSK, phy: bgn, rssi: -33[0m
+[0;32mI (1075) wifi:pm start, type: 0[0m
+
+[0;32mI (1075) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1085) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (1095) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (2135) esp_netif_handlers: sta ip: 192.168.137.78, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (2135) app_rtsp: got ip:192.168.137.78[0m
+[0;32mI (2135) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (2135) s3 ll_cam: DMA Channel=1[0m
+[0;32mI (2135) cam_hal: cam init ok[0m
+[0;32mI (2145) sccb-ng: pin_sda 4 pin_scl 5[0m
+[0;32mI (2145) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (2155) camera: Detected camera at address=0x30[0m
+[0;32mI (2155) camera: Detected OV2640 camera[0m
+[0;32mI (2155) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (2235) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 15[0m
+[0;32mI (2235) cam_hal: Allocating 15360 Byte frame buffer in OnBoard RAM[0m
+[0;32mI (2245) cam_hal: cam config ok[0m
+[0;32mI (2245) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8[0m
+[0;32mI (2305) CAMERA_CONFIG: Camera initialized successfully[0m
+[0;32mI (2305) rtsp_mjpeg: RTSP server task started[0m
+[0;32mI (2305) rtsp_mjpeg: Creating RTSP control socket...[0m
+[0;32mI (2315) rtsp_mjpeg: Binding RTSP control socket...[0m
+[0;32mI (2315) rtsp_mjpeg: Listening on RTSP control socket...[0m
+[0;32mI (2325) rtsp_mjpeg: RTSP listening on port 554[0m
+[0;32mI (2325) rtsp_mjpeg: Waiting for RTSP client connection...[0m
+[0;32mI (2325) app_rtsp: RTSP MJPEG server running[0m
+[0;32mI (2335) main_task: Returned from app_main()[0m
+[0;32mI (20685) rtsp_mjpeg: Client connected 192.168.137.1[0m
+[0;32mI (20685) rtsp_mjpeg: RTP server bound to port 60139[0m
+[0;32mI (20695) rtsp_mjpeg: Streaming to 192.168.137.1:0 (UDP)[0m
+[0;32mI (20695) rtsp_mjpeg: Waiting for RTSP request...[0m
+[0;32mI (25495) rtsp_mjpeg: RTSP <-- (379 bytes):[0m
+OPTIONS rtsp://192.168.137.78:554 RTSP/1.0
+CSeq: 1
+User-Agent: RealMedia Player Version 6.0.9.1235 (linux-2.0-libc6-i386-gcc2.95)
+ClientChallenge: 9e26d33f2984236010ef6253fb1887f7
+PlayerStarttime: [28/03/2003:22:50:23 00:00]
+CompanyID: KnKV4M4I/B2FjJ1TToLycw==
+GUID: 00000000-0000-0000-0000-000000000000
+RegionData: 0
+ClientID: Linux_2.4_6.0.9.1235_play32_RN01_EN_586
+
+
+[0;32mI (25515) rtsp_mjpeg: RTSP --> OPTIONS response[0m
+[0;32mI (25525) rtsp_mjpeg: Waiting for RTSP request...[0m
+[0;32mI (26425) wifi:<ba-add>idx:0 (ifx:0, f2:57:a6:8d:09:78), tid:0, ssn:18, winSize:64[0m
+[0;33mW (30975) rtsp_mjpeg: RTSP recv_rtsp_message()=0, errno=128[0m
+[0;32mI (30975) rtsp_mjpeg: Client session ended[0m
+[0;32mI (30975) rtsp_mjpeg: Waiting for RTSP client connection...[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x2b (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2f00
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Aug  2 2025 12:42:40[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=1f928h (129320) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=0002f950 vaddr=3fc9ba00 size=006c8h (  1736) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=9ae60h (634464) map[0m
+[0;32mI (227) esp_image: segment 3: paddr=000cae88 vaddr=3fc9c0c8 size=05ab8h ( 23224) load[0m
+[0;32mI (232) esp_image: segment 4: paddr=000d0948 vaddr=40374000 size=17918h ( 96536) load[0m
+[0;32mI (253) esp_image: segment 5: paddr=000e8268 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (263) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (263) boot: Disabling RNG early entropy source...[0m
+[0;32mI (273) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (273) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (273) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (276) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (280) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (284) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (288) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (293) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (298) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (303) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (308) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (313) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (316) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (320) esp_psram: Speed: 80MHz[0m
+[0;32mI (323) cpu_start: Multicore app[0m
+[0;32mI (759) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (767) cpu_start: Pro cpu start user code[0m
+[0;32mI (767) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (768) app_init: Application information:[0m
+[0;32mI (768) app_init: Project name:     my_rtsp_dev[0m
+[0;32mI (772) app_init: App version:      1[0m
+[0;32mI (775) app_init: Compile time:     Aug  2 2025 12:42:21[0m
+[0;32mI (780) app_init: ELF file SHA256:  179640919...[0m
+[0;32mI (785) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (788) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (792) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (796) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (800) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (806) heap_init: At 3FCA60D0 len 00043640 (269 KiB): RAM[0m
+[0;32mI (811) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (817) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (822) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (827) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (835) spi_flash: detected chip: gd[0m
+[0;32mI (837) spi_flash: flash io: dio[0m
+[0;33mW (840) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (852) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (859) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (865) main_task: Started on CPU0[0m
+[0;32mI (885) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (885) main_task: Calling app_main()[0m
+[0;32mI (905) pp: pp rom version: e7ae62f[0m
+[0;32mI (905) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (915) wifi:wifi driver task: 3fcb80a4, prio:23, stack:6656, core=0[0m
+[0;32mI (925) wifi:wifi firmware version: 79fa3f41ba[0m
+[0;32mI (925) wifi:wifi certification version: v7.0[0m
+[0;32mI (925) wifi:config NVS flash: enabled[0m
+[0;32mI (925) wifi:config nano formatting: disabled[0m
+[0;32mI (925) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (935) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (935) wifi:Init management short buffer num: 32[0m
+[0;32mI (935) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (945) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (945) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (955) wifi:Init static rx buffer num: 10[0m
+[0;32mI (955) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (965) wifi_init: rx ba win: 6[0m
+[0;32mI (965) wifi_init: accept mbox: 6[0m
+[0;32mI (965) wifi_init: tcpip mbox: 32[0m
+[0;32mI (965) wifi_init: udp mbox: 6[0m
+[0;32mI (975) wifi_init: tcp mbox: 6[0m
+[0;32mI (975) wifi_init: tcp tx win: 5760[0m
+[0;32mI (975) wifi_init: tcp rx win: 5760[0m
+[0;32mI (985) wifi_init: tcp mss: 1440[0m
+[0;32mI (985) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (985) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (995) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (995) phy_init: phy_version 700,8582a7fd,Feb 10 2025,20:13:11[0m
+[0;32mI (1035) wifi:mode : sta (74:4d:bd:89:2c:90)[0m
+[0;32mI (1035) wifi:enable tsf[0m
+[0;32mI (1035) app_rtsp: wifi_init_sta finished.[0m
+[0;32mI (1045) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1045) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1055) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1055) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1075) wifi:connected with THINKPAD 0685, aid = 3, channel 11, BW20, bssid = f2:57:a6:8d:09:78[0m
+[0;32mI (1085) wifi:security: WPA2-PSK, phy: bgn, rssi: -34[0m
+[0;32mI (1085) wifi:pm start, type: 0[0m
+
+[0;32mI (1085) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1095) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (1135) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (2125) esp_netif_handlers: sta ip: 192.168.137.78, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (2125) app_rtsp: got ip:192.168.137.78[0m
+[0;32mI (2125) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (2125) s3 ll_cam: DMA Channel=1[0m
+[0;32mI (2125) cam_hal: cam init ok[0m
+[0;32mI (2135) sccb-ng: pin_sda 4 pin_scl 5[0m
+[0;32mI (2135) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (2145) camera: Detected camera at address=0x30[0m
+[0;32mI (2145) camera: Detected OV2640 camera[0m
+[0;32mI (2145) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (2225) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 15[0m
+[0;32mI (2225) cam_hal: Allocating 15360 Byte frame buffer in OnBoard RAM[0m
+[0;32mI (2235) cam_hal: cam config ok[0m
+[0;32mI (2235) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8[0m
+[0;32mI (2295) CAMERA_CONFIG: Camera initialized successfully[0m
+[0;32mI (2295) rtsp_mjpeg: RTSP server task started[0m
+[0;32mI (2295) rtsp_mjpeg: Creating RTSP control socket...[0m
+[0;32mI (2305) rtsp_mjpeg: Binding RTSP control socket...[0m
+[0;32mI (2305) rtsp_mjpeg: Listening on RTSP control socket...[0m
+[0;32mI (2315) rtsp_mjpeg: RTSP listening on port 554[0m
+[0;32mI (2315) rtsp_mjpeg: Waiting for RTSP client connection...[0m
+[0;32mI (2315) app_rtsp: RTSP MJPEG server running[0m
+[0;32mI (2325) main_task: Returned from app_main()[0m
+[0;32mI (12145) wifi:<ba-add>idx:0 (ifx:0, f2:57:a6:8d:09:78), tid:0, ssn:9, winSize:64[0m
+[0;32mI (13705) rtsp_mjpeg: Client connected 192.168.137.1[0m
+[0;32mI (13705) rtsp_mjpeg: RTP server bound to port 63647[0m
+[0;32mI (13705) rtsp_mjpeg: Streaming to 192.168.137.1:0 (UDP)[0m
+[0;32mI (13705) rtsp_mjpeg: Waiting for RTSP request...[0m
+[0;32mI (13815) rtsp_mjpeg: RTSP <-- (110 bytes):[0m
+SETUP rtsp://192.168.137.78:554/track1 RTSP/1.0
+CSeq: 0
+Transport: RTP/AVP;unicast;client_port=9232-9233
+
+
+[0;32mI (13815) rtsp_mjpeg: RTSP --> SETUP response[0m
+[0;32mI (13815) rtsp_mjpeg: Parsed client RTP port: 9232[0m
+[0;32mI (13825) rtsp_mjpeg: UDP Transport - Client RTP port: 9232, Server RTP port: 63647[0m
+[0;32mI (13835) rtsp_mjpeg: Waiting for RTSP request...[0m
+[0;32mI (14005) rtsp_mjpeg: RTSP <-- (80 bytes):[0m
+PLAY rtsp://192.168.137.78:554/stream=0 RTSP/1.0
+CSeq: 1
+Session: CAFEBABE
+
+
+[0;32mI (14005) rtsp_mjpeg: RTSP --> PLAY response[0m
+[0;32mI (14005) rtsp_mjpeg: Starting streaming to 192.168.137.1:9232[0m
+[0;32mI (14015) rtsp_mjpeg: DQT marker found in JPEG header[0m
+[1;31mE (14015) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14025) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14035) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14035) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14045) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14055) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14055) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14065) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14075) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14085) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14085) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14095) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14105) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14115) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14115) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14125) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14135) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14145) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14145) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14155) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14165) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14175) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14175) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14185) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14195) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14195) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14205) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14215) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14225) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14225) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14235) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14245) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14255) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14255) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14265) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14275) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14285) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14285) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14295) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14305) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14315) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14315) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14325) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14335) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14335) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14345) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14355) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14365) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14365) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14375) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14385) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14395) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14395) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14405) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14415) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14425) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14425) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14435) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14445) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14455) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14455) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14465) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14475) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14485) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14485) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14495) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14505) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14505) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14515) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14525) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14535) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14535) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14545) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14555) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14565) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14565) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14575) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14585) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14595) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14595) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14605) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14615) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14625) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14625) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14635) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14645) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14645) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14655) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14665) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14675) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14675) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14685) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14695) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14705) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14705) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14715) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14725) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14735) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14735) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14745) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14755) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14765) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14765) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14775) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14785) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14785) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14795) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14805) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14815) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14815) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14825) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14835) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14845) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14845) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14855) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14865) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14875) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14875) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14885) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14895) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14905) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14905) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14915) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14925) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14935) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14935) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14945) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14955) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14955) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14965) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14975) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14985) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14985) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (14995) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15005) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15015) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15015) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15025) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15035) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15045) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15045) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15055) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15065) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15075) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15075) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15085) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15095) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15095) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15105) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15115) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15125) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15125) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15135) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15145) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15155) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15155) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15165) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15175) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15185) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15185) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15195) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15205) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15215) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15215) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15225) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15235) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15235) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15245) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15255) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15265) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15265) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15275) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15285) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15295) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15295) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15305) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15315) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15325) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15325) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15335) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15345) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15355) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15355) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15365) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15375) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15385) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15385) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15395) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15405) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15405) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15415) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15425) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15435) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15435) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15445) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15455) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15465) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15465) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15475) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15485) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15495) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15495) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15505) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15515) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15525) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15525) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15535) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15545) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15545) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15555) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15565) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15575) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15575) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15585) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15595) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15605) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15605) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15615) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15625) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15635) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15635) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15645) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15655) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15665) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15665) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15675) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15685) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15695) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15695) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15705) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15715) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15715) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15725) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15735) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15745) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15745) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15755) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15765) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15775) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15775) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15785) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15795) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15805) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15805) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15815) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15825) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15835) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15835) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15845) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15855) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15855) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15865) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15875) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15885) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15885) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15895) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15905) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15915) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m
+[1;31mE (15915) rtsp_mjpeg: JPEG header (613 bytes) too large for packet size (248 bytes)[0m

@@ -1,0 +1,2 @@
+source C:/esp/projects/robots/my_rtsp_dev/build/gdbinit/symbols
+source C:/esp/projects/robots/my_rtsp_dev/build/gdbinit/connect
