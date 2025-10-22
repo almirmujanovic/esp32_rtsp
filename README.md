@@ -24,14 +24,12 @@ A high-performance RTSP server component for ESP32 camera modules, providing rea
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/rtsp-mjpeg-component.git
-cd rtsp-mjpeg-component/examples/basic_rtsp_server
+git clone https://github.com/almirmujanovic/esp32-rtsp.git
 ```
 
 ### 2. Configure WiFi
 ```bash
-cp main/wifi_config.h.example main/wifi_config.h
-# Edit wifi_config.h with your WiFi credentials
+inside app_main.c
 ```
 
 ### 3. Configure Camera Pins
